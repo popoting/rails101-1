@@ -23,6 +23,7 @@ class GroupsController < ApplicationController
     @group.user = current_user
 
     if @group.save
+      current_user
     redirect_to groups_path
   else
     render :new
